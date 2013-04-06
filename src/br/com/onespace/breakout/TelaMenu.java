@@ -37,7 +37,7 @@ public class TelaMenu extends Tela {
 	private void draw() {
 		// TODO Auto-generated method stub
 		spriteBatch.begin();
-		font.draw(spriteBatch, msg, (game.w - msgW) / 2, (game.h - msgH) / 2);
+		font.draw(spriteBatch, msg, (game.getW() - msgW) / 2, (game.getH() - msgH) / 2);
 		spriteBatch.end();
 	}
 

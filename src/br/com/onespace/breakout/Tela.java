@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class Tela implements Screen {
 	protected SpriteBatch spriteBatch;
 	protected Breakout game;
+	public float dt;
 	
 	public Tela(Breakout game){
 		this.game = game;
@@ -17,6 +18,7 @@ public class Tela implements Screen {
 
 	@Override
 	public void render(float delta) {
+		dt = delta;
 		clear();
 	}
 

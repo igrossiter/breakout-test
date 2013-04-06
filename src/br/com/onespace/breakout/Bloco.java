@@ -1,7 +1,8 @@
 package br.com.onespace.breakout;
 
 public class Bloco extends GameObject{
-	public Bloco() {
-		super(32, 4);
+	
+	public Bloco(int w, int h) {
+		super(w, h);
 	}
 }
