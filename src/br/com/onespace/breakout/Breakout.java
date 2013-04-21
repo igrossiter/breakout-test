@@ -1,5 +1,7 @@
 package br.com.onespace.breakout;
 
+import java.util.Random;
+
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -12,6 +14,7 @@ public class Breakout extends Game {
 	private float w;
 	private Texture textura;
 	private SpriteBatch spriteBatch;
+	private Random randon;
 
 
 	@Override
@@ -20,6 +23,7 @@ public class Breakout extends Game {
 		w = Gdx.graphics.getWidth();
 		setTextura(new Texture(Gdx.files.internal("data/atlas.png")));
 		setSpriteBatch(new SpriteBatch());
+		setRandon(new Random());
 		
 		setScreen(getTelaInicial());
 	}
@@ -58,6 +62,14 @@ public class Breakout extends Game {
 
 	public void setSpriteBatch(SpriteBatch spriteBatch) {
 		this.spriteBatch = spriteBatch;
+	}
+
+	public Random getRandon() {
+		return randon;
+	}
+
+	public void setRandon(Random randon) {
+		this.randon = randon;
 	}
 
 }

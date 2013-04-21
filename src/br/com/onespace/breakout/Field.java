@@ -45,9 +45,11 @@ public class Field {
 		
 		for (int i = 0; i < EIXO_X; i++) {
 			for (int j = 0; j < EIXO_Y; j++) {
-				//if (mapa[i][j]) {
-					b[i][j] = new Bloco(blockWidth, blockHeight);	
-				//}
+				// if (mapa[i][j]) {
+					b[i][j] = new Bloco(blockWidth, blockHeight);
+					//movo todos os blocos para fora da tela, só volta os true
+					b[i][j].move(1000f, 1000f);
+				// }
 			}
 		}
 	}

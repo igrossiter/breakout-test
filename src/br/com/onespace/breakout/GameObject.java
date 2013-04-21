@@ -7,6 +7,8 @@ public abstract class GameObject {
 	private Vector2 position = new Vector2();
 	private Vector2 velocity = new Vector2();
 	private Rectangle bounds = new Rectangle();
+	private float centerX;
+	private float centerY;
 	
 	protected GameObject(int width, int height) {
 		bounds.setWidth(width);
@@ -102,5 +104,15 @@ public abstract class GameObject {
 	//relativa a posição atual
 	public void translate(float x, float y){
 		position.add(x, y);
+	}
+
+	public float getCenterX() {
+		centerX = this.getX() + (this.getWidth() / 2);
+		return centerX;
+	}
+
+	public float getCenterY() {
+		centerY = (this.getY() + (this.getHeight()) / 2);
+		return centerY;
 	}
 }
